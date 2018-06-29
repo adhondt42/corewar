@@ -1,0 +1,3 @@
+Remplacer les .h dans chaque src : sed -i -e 's/abc/XYZ/g' /tmp/file.txt
+
+

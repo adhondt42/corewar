@@ -34,22 +34,19 @@ t_board    *init_board_data(t_board *board, char **argv)
     read(board->p1_fd, str, 4);
     board->p1_magic_n = ft_memcpy(board->p1_magic_n, str, 4);
     // comparer le magic N avec celui de la VM
-   
     read(board->p1_fd, str, PROG_NAME_LENGTH);
     str[ft_strlen(str) < PROG_NAME_LENGTH ?
     ft_strlen(str) : PROG_NAME_LENGTH] = '\0';
-    
+    lseek(board->p1_fd, PROG_NAME_LENGTH + 4 + 8, SEEK_SET);
+    // + 4 : magicN, +8....? a quoi correspond les 2 octects avant comment
     read(board->p1_fd, comm, COMMENT_LENGTH);
-    while (i != COMMENT_LENGTH)
-    {
-        if (comm[i] != 0)
-            break;
-        i++;
-    }
-    comm[ft_strlen(comm + i) < COMMENT_LENGTH ?
-    i + ft_strlen(comm + i) : COMMENT_LENGTH] = '\0';
-    board->p1_comment = ft_strdup(comm + i);
-    ft_putstr(board->p1_comment);
+     comm[ft_strlen(comm) < COMMENT_LENGTH ?
+    ft_strlen(comm) : COMMENT_LENGTH] = '\0';
+    board->p1_name = ft_strdup(str);
+    board->p1_comment = ft_strdup(comm);
+    ft_putstr(str);
+    ft_putstr("\n");
+    ft_putstr(comm);
     return (NULL);
 }
 

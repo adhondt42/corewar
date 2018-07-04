@@ -15,6 +15,7 @@
 # include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
 # include <fcntl.h>
 # include "op.h"
 # define BUFF_SIZE 4
@@ -22,13 +23,13 @@ typedef struct		s_board
 {
 	int				p1_fd;
 	int				p2_fd;
-	char			*magic_number;
-	char			*p1_magic_n;
-	char			*p2_magic_n;
+	void			*magic_number;
+	void			*p1_magic_n;
+	void			*p2_magic_n;
 	char			*p1_name;
 	char			*p2_name;
-	char			*p1_comment;
-	char			*p2_comment;
+	char			*p1_comm;
+	char			*p2_comm;
 	char			*mem_board;
 }					t_board;
 

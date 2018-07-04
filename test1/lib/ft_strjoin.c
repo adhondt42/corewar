@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/lem_in.h"
+#include "../inc/corewar.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

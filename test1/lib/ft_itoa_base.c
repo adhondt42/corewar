@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/lem_in.h"
+#include "../inc/corewar.h"
 
 char	*ft_itoa_base(int value, int base, int upper)
 {

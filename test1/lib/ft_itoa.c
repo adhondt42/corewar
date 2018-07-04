@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/lem_in.h"
+#include "../inc/corewar.h"
 
 static void	itoa_negatif(int *n, int *negatif, int *len)
 {

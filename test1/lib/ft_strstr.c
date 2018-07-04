@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/lem_in.h"
+#include "../inc/corewar.h"
 
 char	*ft_strstr(const char *haystack, const char *needle)
 {

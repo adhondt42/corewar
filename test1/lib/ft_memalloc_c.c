@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/lem_in.h"
+#include "../inc/corewar.h"
 
-void		*ft_memalloc_c(size_t size, int c)
+char		*ft_memalloc_c(size_t size, int c)
 {
 	char	*str;
 	size_t	i;

@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   copy_inttab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/14 13:06:53 by adhondt           #+#    #+#             */
-/*   Updated: 2018/06/14 13:26:26 by adhondt          ###   ########.fr       */
+/*   Created: 2018/06/20 13:06:08 by adhondt           #+#    #+#             */
+/*   Updated: 2018/06/20 13:06:15 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/corewar.h"
 
-int	main(int argc, char **argv)
+int		pos_str_tab(char *haystack, char **needle)
 {
-    t_board  *board;
+	int	i;
 
-    if (argc != 3)
-    {
-        ft_putstr("Need 3 args\n");
-        exit (0);
-    };
-    board = init_board_data(board, argv);
-    insert_instructions(board);
-    execute_war(board);
-    return (0);
+	i = 0;
+	while (needle[i])
+	{
+		if (ft_strcmp(haystack, needle[i]) == 0)
+			return (i);
+		i++;
+	}
+	return (-1);
 }

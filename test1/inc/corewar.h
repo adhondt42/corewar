@@ -19,10 +19,24 @@
 # include <fcntl.h>
 # include "op.h"
 # define BUFF_SIZE 4
+
+typedef struct		s_proc
+{
+	int				pos;
+	int				carry;
+	int				*reg[REG_NUMBER];
+	struct s_proc	*next;
+}					t_process;
+
 typedef struct		s_board
 {
+	int				p1_i;
+	int				p2_i;
 	int				p1_fd;
 	int				p2_fd;
+	int				cycle;
+	t_process		p1_first_proc;
+	t_process		p2_first_proc;
 	void			*magic_number;
 	void			*p1_magic_n;
 	void			*p2_magic_n;
@@ -31,8 +45,21 @@ typedef struct		s_board
 	char			*p1_comm;
 	char			*p2_comm;
 	char			*mem_board;
+
 }					t_board;
 
+void      		execute_war(t_board *board);
+void            init_f(void (*f[17])(t_board *b, int player));
+t_board  		*init_board_data(t_board *board, char **argv);
+void			insert_instructions(t_board *board);
+
+/*
+ * LIBRARY FILES
+ */
+int				pos_str_tab(char *haystack, char **needle);
+char   			*ft_retcmd(char *str);
+char			*ft_strncpy(char *dest, const char *src, size_t n);
+char			*ft_itoa_hex_byte(int value, int upper);
 void			*ft_memcpy(void *dest, const void *src, size_t n);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strsub(char const *s, unsigned int start, size_t len);

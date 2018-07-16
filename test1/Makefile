@@ -26,14 +26,14 @@ INC_PATH = ./inc
 OBJ_PATH = ./obj
 OBJLIB_PATH = ./obj
 
-SRC_NAME =	 main.c \
+SRC_NAME =	 main.c data_initialization.c execute_war.c \
 
 LIB_NAME = 	ft_putchar.c ft_putstr.c ft_chardup.c ft_strdup.c \
 			ft_itoa.c ft_atoi.c ft_itoa_base.c ft_memalloc.c ft_memalloc_c.c \
 			ft_putnbr.c ft_strcmp.c ft_strcpy.c ft_strjoin.c ft_strjoin_f.c \
 			ft_strlen.c ft_strstr.c pos_in_str.c ft_memset.c  ft_strcat.c \
 			ft_puttable.c ft_error.c get_next_line.c ft_strsub.c ft_strchr.c \
-			ft_memcpy.c \
+			ft_memcpy.c ft_itoa_hex_byte.c ft_retcmd.c pos_str_tab.c \
 
 INC_NAME = corewar.h
 

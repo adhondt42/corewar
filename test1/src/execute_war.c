@@ -12,17 +12,23 @@
 
 #include "../inc/corewar.h"
 
-int	main(int argc, char **argv)
+void        get_instruction(t_board *b)
 {
-    t_board  *board;
+    int             i;
+    static char		*cmd_list[17] = {"01", "02", "03", "04", "05", "06", "07",
+	    						"08", "09", "0a", "0b", "0c", "0d", "0e", "0f",
+		    					"10", NULL};
+    void            (*f[17])(t_board *b, int);
 
-    if (argc != 3)
-    {
-        ft_putstr("Need 3 args\n");
-        exit (0);
-    };
-    board = init_board_data(board, argv);
-    insert_instructions(board);
-    execute_war(board);
-    return (0);
+    init_f(f);
+    i = pos_str_tab(ft_retcmd(b->mem_board + b->p1_i), cmd_list);
+    f[i];
+
+
+}
+
+void       execute_war(t_board *board)
+{
+    get_instruction(board);
+    ft_puttable(board->mem_board);
 }

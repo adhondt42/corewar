@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/14 13:06:53 by adhondt           #+#    #+#             */
-/*   Updated: 2018/06/14 13:26:26 by adhondt          ###   ########.fr       */
+/*   Created: 2017/11/10 11:31:53 by adhondt           #+#    #+#             */
+/*   Updated: 2018/05/23 16:19:54 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/corewar.h"
 
-int	main(int argc, char **argv)
+char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
-    t_board  *board;
+	size_t	i;
 
-    if (argc != 3)
-    {
-        ft_putstr("Need 3 args\n");
-        exit (0);
-    };
-    board = init_board_data(board, argv);
-    insert_instructions(board);
-    execute_war(board);
-    return (0);
+	i = 0;
+	while (i < n && src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
 }

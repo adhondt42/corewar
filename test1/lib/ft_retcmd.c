@@ -12,17 +12,13 @@
 
 #include "../inc/corewar.h"
 
-int	main(int argc, char **argv)
+char    *ft_retcmd(char *str)
 {
-    t_board  *board;
+    char    *ret;
 
-    if (argc != 3)
-    {
-        ft_putstr("Need 3 args\n");
-        exit (0);
-    };
-    board = init_board_data(board, argv);
-    insert_instructions(board);
-    execute_war(board);
-    return (0);
+    ret = malloc(3);
+    ret[0] = str[0];
+    ret[1] = str[1];
+    ret[2] = '\0';
+    return (ret);
 }

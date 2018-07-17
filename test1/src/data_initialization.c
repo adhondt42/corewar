@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/06/14 13:06:53 by adhondt           #+#    #+#             */
+/*   Updated: 2018/07/16 17:11:35 by adhondt          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../inc/corewar.h"
 
 void            init_f(void (*f[17])(t_board *b, int player))
 {
-    f[0] = cmd_live;
-	f[1] = cmd_ld;
+  // f[0] = cmd_live;
+/*	f[1] = cmd_ld;
 	f[2] = cmd_st;
 	f[3] = cmd_add;
 	f[4] = cmd_sub;
@@ -17,7 +29,7 @@ void            init_f(void (*f[17])(t_board *b, int player))
 	f[12] = cmd_lld;
 	f[13] = cmd_lldi;
 	f[14] = cmd_lfork;
-	f[15] = cmd_aff;
+	f[15] = cmd_aff;*/
 }
 
 void			insert_instructions(t_board *board)

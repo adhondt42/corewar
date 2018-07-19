@@ -6,19 +6,19 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:11:02 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/23 14:39:13 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/07/20 01:47:57 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/corewar.h"
 
-char		*ft_memalloc_c(size_t size, char c)
+unsigned char	*ft_memalloc_c(size_t size, char c)
 {
-	char	*str;
+	unsigned char	*str;
 	size_t	i;
 
 	i = 0;
-	str = (char *)malloc(sizeof(char) * (size + 1));
+	str = (unsigned char *)malloc(sizeof(unsigned char) * (size + 1));
 	while (i != size)
 		str[i++] = c;
 	str[size] = '\0';

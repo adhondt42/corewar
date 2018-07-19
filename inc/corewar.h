@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/14 13:07:31 by adhondt           #+#    #+#             */
-/*   Updated: 2018/06/14 13:25:19 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/07/20 01:48:35 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ void			*ft_memalloc(size_t size);
 char			*ft_strstr(const char *haystack, const char *needle);
 int				ft_strlen(const char *src);
 void			ft_putnbr(int n);
-char			*ft_memalloc_c(size_t size, char c);
+unsigned char	*ft_memalloc_c(size_t size, char c);
 char			*ft_itoa(int n);
 char			*ft_itoa_base(int value, int base, int upper);
 char			*ft_strjoin(char const *s1, char const *s2);

@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/14 13:06:53 by adhondt           #+#    #+#             */
-/*   Updated: 2018/06/14 13:26:26 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/07/20 01:46:51 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ int	main(int argc, char **argv)
         ft_error(1);
     board = init_board_data(board, argv);
     collect_inputs(argv, board);
-    print_champ_lst(board);
     insert_instructions(board);
     // execute_war(board);
+    print_champ_lst(board);
     print_memory(board);
     return (0);
 }
